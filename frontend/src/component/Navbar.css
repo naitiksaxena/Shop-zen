@@ -1,0 +1,265 @@
+.custom-navbar {
+  margin: 18px auto;
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 95% !important;
+
+  z-index: 99999 !important;
+}
+
+/* Logo */
+
+.logo-box {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+
+  border-radius: 12px;
+
+  background: linear-gradient(135deg,
+      #6c5ce7,
+      #a855f7);
+
+  box-shadow: 0 7px 18px rgba(108, 92, 231, 0.3);
+}
+
+.logo-name {
+  color: #171725;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logo-name span {
+  color: #7658e8;
+}
+
+
+/* Navigation */
+
+.nav-link {
+  position: relative;
+
+  color: #555555 !important;
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 10px 12px !important;
+
+  transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #7055df !important;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+
+  width: 0;
+  height: 2px;
+
+  background: #7055df;
+  border-radius: 10px;
+
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 22px;
+}
+
+/* Cart */
+
+.cart-btn {
+  position: relative;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #333333;
+  text-decoration: none;
+
+  background: #f6f6fa;
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.cart-btn i {
+  font-size: 21px;
+}
+
+.cart-btn:hover {
+  color: #7055df;
+  background: #efebff;
+  transform: translateY(-2px);
+}
+
+.cart-count {
+  position: absolute;
+
+  top: -7px;
+  right: -7px;
+
+  min-width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  color: #ffffff;
+  background: #ff4d6d;
+
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Login */
+
+.login-btn {
+  display: flex;
+  align-items: center;
+
+  padding: 11px 18px;
+
+  color: #ffffff !important;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  background: linear-gradient(135deg,
+      #7055df,
+      #9b5de5);
+
+  border-radius: 11px;
+
+  box-shadow: 0 7px 18px rgba(112, 85, 223, 0.25);
+
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(112, 85, 223, 0.35);
+}
+
+/* Mobile Button */
+
+.navbar-toggler i {
+  color: #333333;
+  font-size: 25px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+
+  .custom-navbar {
+    width: 96%;
+  }
+
+
+  .navbar-nav {
+    align-items: flex-start !important;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    padding-left: 0 !important;
+  }
+
+  .nav-link::after {
+    left: 10px;
+    transform: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 575px) {
+
+  .custom-navbar {
+    width: 96%;
+    margin: 10px auto;
+    padding: 8px 12px;
+  }
+
+  .logo-name {
+    font-size: 19px;
+  }
+
+  .logo-box {
+    width: 38px;
+    height: 38px;
+  }
+}
+/* Mobile: My Orders, Cart, Login/Logout menu ke bahar hamesha dikhte hain */
+
+.nav-actions {
+  flex-shrink: 0;
+}
+
+@media (max-width: 575px) {
+
+  .nav-actions .cart-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-actions .cart-btn i {
+    font-size: 18px;
+  }
+
+  .nav-actions .login-btn {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .nav-actions .logout-btn {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .custom-navbar .navbar-toggler {
+    padding: 4px 6px;
+  }
+}
