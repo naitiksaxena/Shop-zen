@@ -78,7 +78,7 @@ function Products() {
         {/* Products */}
         <div className="row g-4">
           {filteredProducts.map((product) => (
-            <div className="col-12 col-sm-6 col-lg-4 col-xl-3" key={product.id}>
+            <div className="col-6 col-sm-6 col-lg-4 col-xl-3" key={product.id}>
               <div className="card border-0 shadow-sm h-100 rounded-4 overflow-hidden">
                 {/* Product Image */}
                 <div
