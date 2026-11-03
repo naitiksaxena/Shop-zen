@@ -87,11 +87,19 @@ function Login() {
 
     } catch (error) {
       console.log("Login Error:", error);
-      setError("Server se connection nahi ho raha");
+      setError("Unable to connect to the server");
     } finally {
       setLoading(false);
     }
   };
+  const [showPassword, setShowPassword] = useState(false);
+  const[showicon, setShowIcon] = useState(false);
+
+  const handletoggle = () => {
+    setShowPassword(!showPassword);
+    setShowIcon(!showicon);
+  };
+
 
   return (
     <div className="container py-5">
@@ -169,13 +177,16 @@ function Login() {
                     </span>
 
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       name="password"
                       className="form-control"
                       placeholder="Enter your password"
                       value={formData.password}
                       onChange={handleChange}
                     />
+                    <span className="input-group-text bg-white">
+                      <i className={showPassword ? "bi bi-eye-slash" : "bi bi-eye"} onClick={handletoggle}></i>
+                    </span>
                   </div>
                 </div>
 

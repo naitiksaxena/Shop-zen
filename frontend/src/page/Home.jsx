@@ -96,7 +96,7 @@ function Home() {
       </section>
 
       {/* Why Choose ShopZen */}
-      <section className="container py-5">
+      <section className="container py-2">
         <div className="text-center">
           <h2 className="fw-bold mt-3">Everything You Need in One Place</h2>
 
@@ -246,45 +246,7 @@ function Home() {
           }}
         >
           <div className="container">
-            <div className="row gy-4 mb-5">
-              <div className="col-12 col-md-6 col-lg-5">
-                <h5 className="fw-bold mb-3">About us</h5>
-                <p className="text-white-50" style={{ maxWidth: 420 }}>
-                  Two guys, and one hat to rule them both. Or so we thought –
-                  turned out we were in it for the long game, and are on a
-                  mission to change menswear for the better.
-                </p>
-              </div>
-
-              <div className="col-12 col-md-6 col-lg-6 offset-lg-1">
-                <form onSubmit={handleSubmit}>
-                  <label
-                    htmlFor="footerEmail"
-                    className="form-label fw-bold fs-5"
-                  >
-                    Email address
-                  </label>
-                  <input
-                    id="footerEmail"
-                    type="email"
-                    placeholder="Your email address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="form-control rounded-0 border-0 py-2 px-3 bg-light"
-                  />
-                  <div className="d-grid d-sm-block mt-3">
-                    <button
-                      type="submit"
-                      className="btn btn-primary rounded-0 px-4 py-2 fw-semibold"
-                    >
-                      SUBMIT
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
+            
             <div className="row gy-4">
               <div className="col-12 col-sm-6 col-lg-3">
                 <h5 className="fw-bold mb-3">Address</h5>

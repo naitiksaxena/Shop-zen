@@ -71,14 +71,14 @@ function Products() {
           <div className="text-center py-5">
             <div className="spinner-border text-primary" role="status"></div>
 
-            <p className="mt-3 text-secondary">Loading products...</p>
+            <p className="mt-3 text-secondary">Loading products...Please wait</p>
           </div>
         )}
 
         {/* Products */}
         <div className="row g-4">
           {filteredProducts.map((product) => (
-            <div className="col-12 col-sm-6 col-lg-4 col-xl-3" key={product.id}>
+            <div className="col-6 col-sm-6 col-lg-4 col-xl-3" key={product.id}>
               <div className="card border-0 shadow-sm h-100 rounded-4 overflow-hidden">
                 {/* Product Image */}
                 <div

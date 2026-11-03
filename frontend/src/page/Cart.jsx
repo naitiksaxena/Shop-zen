@@ -8,7 +8,6 @@ function Cart() {
 
   const navigate = useNavigate();
 
-  // Checkout se pehle login zaroori hai
   const handleCheckout = () => {
     const token = localStorage.getItem("token");
 

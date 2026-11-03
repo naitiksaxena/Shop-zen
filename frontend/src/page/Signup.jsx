@@ -88,6 +88,14 @@ function Signup() {
       setLoading(false);
     }
   };
+  const [showPassword, setShowPassword] = useState(false);
+    const[showicon, setShowIcon] = useState(false);
+  
+    const handletoggle = () => {
+      setShowPassword(!showPassword);
+      setShowIcon(!showicon);
+    };
+  
 
   return (
     <div className="container py-5">
@@ -180,13 +188,14 @@ function Signup() {
                     </span>
 
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       name="password"
                       className="form-control"
                       placeholder="Create a password"
                       value={formData.password}
                       onChange={handleChange}
                     />
+                    
                   </div>
                 </div>
 
@@ -201,13 +210,16 @@ function Signup() {
                     </span>
 
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"}
                       name="confirmPassword"
                       className="form-control"
                       placeholder="Confirm your password"
                       value={formData.confirmPassword}
                       onChange={handleChange}
                     />
+                    <span className="input-group-text bg-white">
+                      <i className={showicon ? "bi bi-eye-slash" : "bi bi-eye"} onClick={handletoggle}></i>
+                    </span>
                   </div>
                 </div>
 
